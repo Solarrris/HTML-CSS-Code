@@ -1,13 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
 
-html {
-  width: 1440px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background-image: url(./images/pattern-background-desktop.svg);
-  background-color: hsl(225, 100%, 94%);
   background-repeat: no-repeat;
+  background-size: 1400px;
+  background-color: hsl(225, 100%, 94%);
+  background-position: top center;
   font-size: 16px;
   font-family: "Red Hat Display", sans-serif;
   display: flex;
@@ -134,4 +138,17 @@ div.bottom > a:hover {
 .attribution {
   position: absolute;
   bottom: 1%;
+}
+
+@media screen and (min-width: 1400px) {
+  html {
+    font-size: calc(16vw / 14);
+  }
+  body {
+    background-size: 100%;
+  }
+
+  div.card {
+    width: 32.1%;
+  }
 }
